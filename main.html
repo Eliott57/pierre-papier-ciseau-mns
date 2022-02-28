@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rocher, Sapin, Scie !</title>
+    <meta name="description" content="Jeu du Pierre, Papier, Ciseau !">
+    <meta name="author" content="Eliott Oblinger">
+
+    <meta property="og:title" content="Rocher, Sapin, Scie !">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Jeu du Pierre, Papier, Ciseau !">
+    <meta property="og:image" content="image.png">
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="h1-title">
+        Rocher, Sapin, Scie !
+        <span class="restart" onclick="restart()">Recommencer ?</span>
+    </h1>
+
+    <h2 class="h2-title"><span class="player-score">0</span> - <span class="bot-score">0</span></h2>
+
+    <div class="history">
+        <span class="history-title">Dernières parties</span>
+        <div class="history-content">
+
+        </div>
+    </div>
+
+    <div class="select-container-1">
+        <h2 class="select-title">Vous</h2>
+        <img class="img-player" src="img/start.png" alt="Choix joueur"/>
+        <hr style="margin-bottom: 20px;" />
+        <div class="select-item-1">
+            <button type="button" class="btn-player rock-1" onclick="chooseItem(this, 'rock')">
+                <img class="btn" src="img/rock.png" alt="Pierre"/>
+            </button>
+            <button type="button" class="btn-player paper-1" onclick="chooseItem(this, 'paper')">
+                <img class="btn" src="img/paper.png" alt="Papier"/>
+            </button>
+            <button type="button" class="btn-player scissors-1" onclick="chooseItem(this, 'scissors')">
+                <img class="btn" src="img/scissors.png" alt="Ciseau"/>
+            </button>
+        </div>
+    </div>
+    <div class="select-container-2">
+        <h2 class="select-title">Ordinateur</h2>
+        <img class="img-bot" src="img/start.png" alt="Choix ordinateur"/>
+        <hr style="margin-bottom: 20px;" />
+        <div class="select-item-2">
+            <button type="button" class="btn-bot rock-2" disabled>
+                <img class="btn" src="img/rock.png" alt="Pierre"/>
+            </button>
+            <button type="button" class="btn-bot paper-2" disabled>
+                <img class="btn" src="img/paper.png" alt="Papier"/>
+            </button>
+            <button type="button" class="btn-bot scissors-2" disabled>
+                <img class="btn" src="img/scissors.png" alt="Ciseau"/>
+            </button>
+        </div>
+    </div>
+    <div class="result-container">
+        Séléctionnez une image pour commencer la partie
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
