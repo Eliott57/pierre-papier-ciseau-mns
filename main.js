@@ -57,7 +57,7 @@ function chooseItem(element, item){
         resultText.innerHTML = 'Egalité !';
     }
 
-    if(intPlayerScore === 10 || intBotScore === 10){
+    if(intPlayerScore === 5 || intBotScore === 5){
         if(intPlayerScore > intBotScore){
             message = 'Vous avez gagné ! Souhaitez vous recommencer ?'
             historyContent.innerHTML += '<span>Victoire ('+ playerScore.innerHTML + '-' + botScore.innerHTML +')</span>';
@@ -108,11 +108,5 @@ function restart(){
 function unselectAll(){
     for (let i = 0; i < btnBot.length; i++) {
         btnBot.item(i).classList.remove('selected');
-    }
-}
-
-function disabledAll(){
-    for (let i = 0; i < btnPlayer.length; i++) {
-        btnPlayer.item(i).disabled = true;
     }
 }
